@@ -4,7 +4,7 @@ window.onload = function(){
 // set var 'turn' = 0
 
 var body = document.querySelector('body');
-var playerTurnHeadline = body.querySelector('.playerTurn');
+var playerTurnHeadline = body.querySelector('#playerText');
 var turn = 0;
 var gameBoard = [];
 
@@ -44,7 +44,6 @@ function addResetCheck() {
 
 // start()
 // onLoad
-// run setGameBoard();
 // run addClickCheck();
 // run addResetCheck();
 function start() {
@@ -62,14 +61,19 @@ start();
 	// Change headline "Its Player One's Turn"
 // This should add one to var 'turn'
 function runPlayerMove(boxClicked) {
-	if (turn%2 ===0) {
+	if (turn%2 ===0 && boxClicked.innerHTML.length === 0) {
 		playerOneMove(boxClicked);
-		playerTurnHeadline.textContent = "It's Player Two's Turn";
-	} else if (turn%2 !==0) {
+		playerTurnHeadline.textContent = "Player Two's Turn - You are O's";
+		playerTurnHeadline.setAttribute('class', 'playerTurnTwo');
+		turn += 1;
+	} else if (turn%2 !==0 && boxClicked.innerHTML.length === 0) {
 		playerTwoMove(boxClicked);
-		playerTurnHeadline.textContent = "It's Player One's Turn";
+		playerTurnHeadline.textContent = "Player One's Turn - You are X's";
+		playerTurnHeadline.setAttribute('class', 'playerTurnOne');
+		turn += 1;
+	} else {
+		alert("That square has already been played!");
 	}
-	turn += 1;
 }
 
 // Run playerOneMove()
@@ -83,9 +87,9 @@ function runPlayerMove(boxClicked) {
 	// Ststem will wait for another click, then run playerMove();
 function playerOneMove(boxClicked){
 	var selectedBox = boxClicked;
-	var xMove = document.createElement('p');
+	var xMove = document.createElement('div');
+	xMove.innerHTML = "X";
 	xMove.setAttribute('class', 'x');
-	xMove.textContent = "X";
 	selectedBox.appendChild(xMove);
 
 }
@@ -99,9 +103,9 @@ function playerOneMove(boxClicked){
 // This should (somehow) make this spot unavailable.
 function playerTwoMove(boxClicked){
 	var selectedBox = boxClicked;
-	var yMove = document.createElement('p');
+	var yMove = document.createElement('div');
+	yMove.innerHTML = "O";
 	yMove.setAttribute('class', 'o');
-	yMove.textContent = "O";
 	selectedBox.appendChild(yMove);
 }
 
@@ -109,18 +113,11 @@ function playerTwoMove(boxClicked){
 // resetGame()
 // set gameBoard array to [ ]
 // set var turn = 0
-// run start();
 function resetBoard() {
-	console.log("Reset has run");
-	gameBoard = [];
+	for (var i=0; i < gameBoard.length; i++) {
+		gameBoard[i].innerHTML = ""; }
 	turn = 0;
-	start();
+	playerTurnHeadline.textContent = "It's Player One's Turn";
 }
 
-console.log(turn);
-
 };
-
-
-
-

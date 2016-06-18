@@ -1,41 +1,108 @@
 body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif; 
    font-weight: 300;
+   background: url(http://wallpaperlab.net/wp-content/uploads/2015/09/Black-and-white-mountains-in-fog.jpg) no-repeat center center fixed;
+   background-size: cover;
 }
-.playerTurn {
-	color: blue;
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #e4685d;
+	font-size: 50px;
+}
+
+h2 {
+	margin: 5 auto;
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+
+}
+
+.header {
+	text-align: center;
+}
+
+.playerTurnOne {
+	color: #2dabf9;
+}
+
+.playerTurnTwo {
+	color: #e4685d;
+}
+
+#playerText {
+
 }
 
 .resetButton {
-	align: center;
+	width: 100px;
+}
+
+.board {
+	margin-top: 10px;
 }
 
 .box {
-	height: 250px;
-	width: 250px;
-	border: solid 3px grey;
+	height: 200px;
+	width: 200px;
+	border: solid 3px white;
+	border-radius: 7px;
 	display: inline-block;
-	padding: 0;
+	text-align: center;
+	color:#fff;
+  	background:rgba(255,255,255,0.80);
+  	cursor:pointer;
+  	margin: 15px;
 }
 
 .row {
 	display: block;
+	text-align: center;
 }
 
 .x {
-	font-size: 125px;
+	width: 200px;
+	font-size: 100px;
 	position: absolute;
-	display: inline-block;
-	margin: 45px 85px;
-	text-align: center;
-	color: blue;
+	color: #2dabf9;
+	margin-top: 35px;
 }
 
 .o {
-	font-size: 125px;
+	width: 200px;	
+	font-size: 100px;
 	position: absolute;
-	display: inline-block;
-	margin: 45px 85px;
-	text-align: center;
-	color: red;
+	color: #e4685d;
+	margin-top: 35px;
 }
+
+.resetButton {
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size: 12px;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+	outline: 0;
+}
+.resetButton:hover {
+	background-color:#eb675e;
+}
+.resetButton:active {
+	position:relative;
+	top:1px;
+}
+
