@@ -1,0 +1,41 @@
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif; 
+   font-weight: 300;
+}
+.playerTurn {
+	color: blue;
+}
+
+.resetButton {
+	align: center;
+}
+
+.box {
+	height: 250px;
+	width: 250px;
+	border: solid 3px grey;
+	display: inline-block;
+	padding: 0;
+}
+
+.row {
+	display: block;
+}
+
+.x {
+	font-size: 125px;
+	position: absolute;
+	display: inline-block;
+	margin: 45px 85px;
+	text-align: center;
+	color: blue;
+}
+
+.o {
+	font-size: 125px;
+	position: absolute;
+	display: inline-block;
+	margin: 45px 85px;
+	text-align: center;
+	color: red;
+}
