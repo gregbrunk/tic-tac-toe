@@ -65,12 +65,10 @@ function runPlayerMove(boxClicked) {
 		playerOneMove(boxClicked);
 		playerTurnHeadline.textContent = "Player Two's Turn - You are O's";
 		playerTurnHeadline.setAttribute('class', 'playerTurnTwo');
-		turn += 1;
 	} else if (turn%2 !==0 && boxClicked.innerHTML.length === 0) {
 		playerTwoMove(boxClicked);
 		playerTurnHeadline.textContent = "Player One's Turn - You are X's";
 		playerTurnHeadline.setAttribute('class', 'playerTurnOne');
-		turn += 1;
 	} else {
 		alert("That square has already been played!");
 	}
@@ -91,7 +89,11 @@ function playerOneMove(boxClicked){
 	xMove.innerHTML = "X";
 	xMove.setAttribute('class', 'x');
 	selectedBox.appendChild(xMove);
-
+	turn += 1;
+	
+	if (turn === 9) {
+		alert ("It's a draw! Click the reset button to start a new game.");
+	}
 }
 
 
@@ -107,8 +109,12 @@ function playerTwoMove(boxClicked){
 	yMove.innerHTML = "O";
 	yMove.setAttribute('class', 'o');
 	selectedBox.appendChild(yMove);
+	turn += 1;
+	
+	if (turn === 9) {
+		alert ("It's a draw! Click the reset button to start a new game");
+	}
 }
-
 
 // resetGame()
 // set gameBoard array to [ ]
@@ -117,7 +123,8 @@ function resetBoard() {
 	for (var i=0; i < gameBoard.length; i++) {
 		gameBoard[i].innerHTML = ""; }
 	turn = 0;
-	playerTurnHeadline.textContent = "It's Player One's Turn";
+	playerTurnHeadline.textContent = "Player One's Turn - You are X's";
+	playerTurnHeadline.setAttribute('class', 'playerTurnOne');
 }
 
 };

@@ -3,6 +3,8 @@ body {
    font-weight: 300;
    background: url(http://wallpaperlab.net/wp-content/uploads/2015/09/Black-and-white-mountains-in-fog.jpg) no-repeat center center fixed;
    background-size: cover;
+   margin: 0;
+   padding: 0;
 }
 
 ul {
@@ -14,6 +16,7 @@ ul {
 h1 {
 	color: #e4685d;
 	font-size: 50px;
+	margin: 0px 0px 20px 0px;
 }
 
 h2 {
@@ -28,6 +31,8 @@ h3 {
 
 .header {
 	text-align: center;
+	background:rgba(0,0,0,0.05);
+	padding: 30px 0px 30px 0px;
 }
 
 .playerTurnOne {
@@ -47,7 +52,7 @@ h3 {
 }
 
 .board {
-	margin-top: 10px;
+	margin-top: 30px;
 }
 
 .box {
@@ -58,9 +63,13 @@ h3 {
 	display: inline-block;
 	text-align: center;
 	color:#fff;
-  	background:rgba(255,255,255,0.80);
+  	background:rgba(255,255,255,0.85);
   	cursor:pointer;
-  	margin: 15px;
+  	margin: 10px;
+}
+
+.box:hover{
+  	background:rgba(255,255,255,0.45);
 }
 
 .row {
