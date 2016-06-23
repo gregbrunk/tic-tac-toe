@@ -22,8 +22,8 @@ window.onload = function(){
 			for (i=0; i < 9; i++){
 				var box = body.querySelectorAll('.box')[i];
 				this.gameBoard.push(box);
-				globalGameBoard = this.gameBoard;
 			}
+			globalGameBoard = this.gameBoard;
 		},
 		addClickCheck: function(){
 			for (var i=0; i < this.gameBoard.length; i++) {
