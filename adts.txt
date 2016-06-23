@@ -1,0 +1,9 @@
+My ADT's:
+	1) Game Board
+	2) Click Checker
+	3) Reset Checker
+	4) Who's Turn
+	5) Player 1's Move
+	6) Player 2's Move
+	7) Reset the Board
+	8) Empty Board State
