@@ -1,14 +1,18 @@
 My ADT's:
 	1) Game Board
-	2) Click Checker (Too small, wont do)
-	3) Reset Checker (Too small, wont do)
+	2) Click Checker
+	3) Reset Checker
 	4) Who's Turn
 	5) Player 1's Move (Too small, wont do)
 	6) Player 2's Move (Too small, wont do)
 	7) A Move
-	7) Reset the Board (Too small, wont do)
+	8) Reset the Board
 
-I Am Doing:
-	- Game Board
-	- Turn
-	- A Move
+I Ended Up Doing:
+	- Setup Game Board
+	- Click Check
+	- Reset Check
+	- Reset Board
+	- Start Game
+
+I created a short term JS file for a clean refactoring work environment, but you can ignore that now. My updated code is all in tic-tac-toe.js and the index.html file works correctly.
