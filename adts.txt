@@ -1,9 +1,14 @@
 My ADT's:
 	1) Game Board
-	2) Click Checker
-	3) Reset Checker
+	2) Click Checker (Too small, wont do)
+	3) Reset Checker (Too small, wont do)
 	4) Who's Turn
-	5) Player 1's Move
-	6) Player 2's Move
-	7) Reset the Board
-	8) Empty Board State
+	5) Player 1's Move (Too small, wont do)
+	6) Player 2's Move (Too small, wont do)
+	7) A Move
+	7) Reset the Board (Too small, wont do)
+
+I Am Doing:
+	- Game Board
+	- Turn
+	- A Move
