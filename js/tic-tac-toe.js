@@ -1,7 +1,6 @@
 
 //This allows the JS to load AFTER the DOM has loaded.
 window.onload = function(){
-
 	var body = document.querySelector('body');
 	var playerTurnHeadline = body.querySelector('#playerText');
 	var turn = 0;
